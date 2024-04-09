@@ -2,7 +2,7 @@ package tmp
 
 import "fmt"
 
-func test() {
+func TestRotate() {
 	nums := []int{1, 2}
 	// 2,1 1,2 2,1
 	// 1,2,3,4

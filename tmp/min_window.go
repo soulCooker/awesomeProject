@@ -2,7 +2,7 @@ package tmp
 
 import "fmt"
 
-func test() {
+func TestMinWindow() {
 	fmt.Println(int('z') - int('Z'))
 	res := minWindow("cabwefgewcwaefgcf", "cae")
 	fmt.Println(res)

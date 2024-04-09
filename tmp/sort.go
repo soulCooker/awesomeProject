@@ -1,9 +1,5 @@
 package tmp
 
-func test() {
-
-}
-
 /*
 *
 5 2 9 1 8 4 1

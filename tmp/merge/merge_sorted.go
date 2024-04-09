@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-func test() {
+func TestMergeSorted() {
 	intervals := [][]int{{1, 3}, {2, 6}, {8, 10}, {15, 18}}
 	res := mergeSorted(intervals)
 	fmt.Println(res)

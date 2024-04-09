@@ -14,7 +14,7 @@ heap
 
 */
 
-func test() {
+func TestMaxSlidingWindow() {
 	input := []int{1, 3, -1, -3, 5, 3, 6, 7}
 	res := maxSlidingWindow(input, 3)
 	fmt.Println(res)

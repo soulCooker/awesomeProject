@@ -2,7 +2,7 @@ package tmp
 
 import "fmt"
 
-func test() {
+func TestHanoi() {
 	hanoi(7, "a", "b", "c")
 }
 

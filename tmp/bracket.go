@@ -4,7 +4,7 @@ import "fmt"
 
 // )(())(())
 
-func test() {
+func TestFindLongestBracketString() {
 	//
 	count := findLongestBracketString("()((()))((())")
 	fmt.Println(count)

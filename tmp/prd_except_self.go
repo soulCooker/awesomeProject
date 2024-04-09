@@ -13,7 +13,7 @@ r[i-1]=r[i]*nums[i]
 mul[i] = l[i]*r[i]
 */
 
-func test() {
+func TestProductExceptSelf() {
 	res := productExceptSelf([]int{1, 2, 3, 4})
 
 	fmt.Println(res)

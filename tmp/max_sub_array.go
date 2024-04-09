@@ -9,7 +9,7 @@ import "fmt"
 
 */
 
-func test() {
+func TestMaxSubArray() {
 	res := maxSubArray([]int{-2, -2})
 	fmt.Println(res)
 }
