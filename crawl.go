@@ -12,12 +12,6 @@ import (
 	"golang.org/x/net/html"
 )
 
-func TestCrawl() {
-	start := time.Now()
-	Crawl("https://go.dev/talks/", 5)
-	fmt.Printf("cost:%v\n", time.Now().Sub(start))
-}
-
 func Crawl(url string, depth int) {
 	ch := make(chan []string)
 	currentLevel := []string{url}
@@ -57,6 +51,9 @@ func Crawl(url string, depth int) {
 			case curTime := <-timeOut:
 				fmt.Printf("timeout:%s", curTime)
 				break label
+			default:
+				time.Sleep(time.Millisecond * 50)
+				i--
 			}
 		}
 		currentLevel = nextLevel
