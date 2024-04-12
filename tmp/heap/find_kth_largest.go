@@ -63,23 +63,34 @@ func doQuickSort(nums []int, start, end int, cmp func(val1, val2 int) int) {
 */
 func quickselect(nums []int, l, r, k int) int {
 	if l == r {
-		return nums[k]
+		return nums[l]
 	}
-	newL := rand.Intn(r - l)
-	swap(nums, l, l+newL)
+	var (
+		i = l - 1
+		j = r + 1
+	)
+
 	partition := nums[l]
-	i := l - 1
-	j := r + 1
+
 	for i < j {
+		//for i++; i < r; i++ {
+		//	if nums[i] >= partition {
+		//		break
+		//	}
+		//}
+		/**
+		如果i或j值等于分区值时，都会步进1，保证i与j之间的区间在缩小
+		*/
 		for i++; nums[i] < partition; i++ {
-		}
+		} //因为i<j<=r，所以不用判断i<r，直接与分区值比较
 		for j--; nums[j] > partition; j-- {
 		}
 		if i < j {
 			nums[i], nums[j] = nums[j], nums[i]
 		}
 	}
-	if k <= j {
+
+	if j >= k { //左区间，选择较小的j作为右边界。对于极端情况如r=l+1时，j=l，i=l+1，此时选择j才是对的。
 		return quickselect(nums, l, j, k)
 	} else {
 		return quickselect(nums, j+1, r, k)
