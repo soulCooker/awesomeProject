@@ -1,9 +1,9 @@
-module my.com/awesomeProject
+module example.com/awesome
 
-go 1.17
+go 1.19
 
-require golang.org/x/text v0.14.0
-
-require github.com/spf13/cast v1.5.0
-
-require golang.org/x/net v0.22.0 // indirect
+require (
+	github.com/spf13/cast v1.6.0
+	golang.org/x/net v0.24.0
+	golang.org/x/text v0.14.0
+)
