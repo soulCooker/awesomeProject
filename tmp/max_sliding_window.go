@@ -40,11 +40,11 @@ func (h hp) Swap(i, j int) {
 	h.Index[j] = tmp
 }
 
-func (h *hp) Push(x any) {
+func (h *hp) Push(x interface{}) {
 	h.Index = append(h.Index, x.(int))
 }
 
-func (h *hp) Pop() any {
+func (h *hp) Pop() interface{} {
 	top := h.Index[len(h.Index)-1]
 	h.Index = h.Index[0 : len(h.Index)-1]
 	return top

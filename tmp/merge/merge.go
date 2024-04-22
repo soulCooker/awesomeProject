@@ -32,11 +32,11 @@ func (hp IntervalHeap) Swap(i, j int) {
 	hp.hpArr[j] = tmp
 }
 
-func (hp *IntervalHeap) Push(x any) {
+func (hp *IntervalHeap) Push(x interface{}) {
 	hp.hpArr = append(hp.hpArr, x.(int))
 }
 
-func (hp *IntervalHeap) Pop() any {
+func (hp *IntervalHeap) Pop() interface{} {
 	res := hp.hpArr[len(hp.hpArr)-1]
 	hp.hpArr = hp.hpArr[0 : len(hp.hpArr)-1]
 	return res
