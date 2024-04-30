@@ -32,11 +32,14 @@ func doPartiton(s string, start, end int) [][]string {
 	return res
 }
 
+// 回文字符串，双指针写法
 func isSymmetric(s string, start, end int) bool {
 	for i := start; i <= (start+end)/2; i++ {
 		if s[i] != s[start+end-i] {
 			return false
 		}
 	}
+
 	return true
+
 }
