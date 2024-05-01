@@ -29,3 +29,20 @@ func TestCopy(t *testing.T) {
 
 	fmt.Println(len, ",", arr2)
 }
+
+func TestBitOp(t *testing.T) {
+	a := 'a'
+
+	fmt.Printf("%b\n", a)
+	fmt.Printf("%b\n", 'A')
+	fmt.Printf("%b\n", 'Z')
+	fmt.Printf("%b\n", 'z')
+
+	a = a | 1<<7
+
+	fmt.Printf("%b\n", a)
+
+	a = a & (1<<7 - 1)
+
+	fmt.Printf("%b\n", a)
+}
