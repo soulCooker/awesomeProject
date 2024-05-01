@@ -13,7 +13,7 @@ func quickSort(arr []int) {
 func doQuickSort(arr []int, start, end int) {
 	fmt.Printf("start:%d, end:%d\n", start, end)
 	//如果 start>=end，返回
-	if start >= end {
+	if start == end {
 		return
 	}
 	//第一个元素也就start作为初始partition值
@@ -38,6 +38,7 @@ func doQuickSort(arr []int, start, end int) {
 		// 如果l<r
 		//	将l与r交换
 	}
+	// r必定>=start，且<end
 	//对start，r
 	//对r+1，end
 	doQuickSort(arr, start, r)
