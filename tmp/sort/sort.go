@@ -44,9 +44,3 @@ func doQuickSort(arr []int, start, end int) {
 	doQuickSort(arr, start, r)
 	doQuickSort(arr, r+1, end)
 }
-
-func swap(arr []int, i, j int) {
-	tmp := arr[i]
-	arr[i] = arr[j]
-	arr[j] = tmp
-}

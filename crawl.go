@@ -29,7 +29,7 @@ func Crawl(url string, depth int) {
 		}
 
 	label:
-		for i := 0; i < len(currentLevel); i++ {
+		for i := 0; i < len(currentLevel); {
 			timeOut := time.After(2 * time.Second)
 			select {
 			case nextLinks := <-ch:
@@ -46,14 +46,15 @@ func Crawl(url string, depth int) {
 						discovered[shortLink] = 1
 					}
 				}
+				i++
 			case errCh := <-errCh:
 				fmt.Println(errCh)
+				i++
 			case curTime := <-timeOut:
 				fmt.Printf("timeout:%s", curTime)
 				break label
 			default:
 				time.Sleep(time.Millisecond * 50)
-				i--
 			}
 		}
 		currentLevel = nextLevel
