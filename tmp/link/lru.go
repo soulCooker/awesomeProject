@@ -1,7 +1,7 @@
 package link
 
 /**
-双双向链表实现LRU缓存
+哈希表+双向链表实现LRU缓存
 **/
 
 type LRUCache struct {

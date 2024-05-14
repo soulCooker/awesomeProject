@@ -6,8 +6,8 @@ import (
 )
 
 func TestRange(t *testing.T) {
-	input := []int{1, 1, 2, 2, 2, 4}
-	res := searchRange(input, 2)
+	input := []int{1, 1, 2, 2, 2, 5}
+	res := searchRange2(input, 1)
 	fmt.Println("res:", res)
 
 	insert := searchInsert(input, 2)
